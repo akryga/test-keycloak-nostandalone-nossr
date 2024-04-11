@@ -230,7 +230,25 @@
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
+
+      <!-- <div *ngIf="userProfile"  class="align-middle">
+        <span class="align-middle">{{ userProfile!.username }}</span>
+        <button *ngIf="isLoggedIn" type="button" (click)="logout()">logout</button>
+      </div> -->
+
       <div class="pill-group">
+        <a *ngIf="isLoggedIn" (click)="logout()"
+        class="pill" href="">
+        <span *ngIf="userProfile" style="margin-right: 1rem">{{ userProfile!.username }}</span>
+          Logout
+        </a>
+
+        <a *ngIf="!isLoggedIn" (click)="login()"
+        class="pill" href=""
+        target="_blank">
+          Login
+        </a>
+
         @for (item of [
           { title: 'Explore the Docs', link: 'https://angular.dev' },
           { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },

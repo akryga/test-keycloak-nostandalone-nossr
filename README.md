@@ -1,6 +1,10 @@
 # TestKeycloakNostandaloneNossr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+## Add keycloak-angular and keycloak-js
+
+Create new application `ng new test-keycloak-nostandalone-nossr --standalone false --ssr false`. Run `npm i keycloak-angular keycloak-js`
+add providers code to `app.module.ts`, add KeycloakService to `app.component.ts`
 
 ## Development server
 
